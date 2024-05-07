@@ -76,8 +76,24 @@ if answer == c or answer == "c":
     print("Correct.")
     print("Next Question.")
     score += 1
+elif answer == "":
+    print("An answer is required.")
 elif answer != c or answer != "c":
     print("No it's the A330 lol.")
+
+question = "What aircraft type crashed landed on the Hudson River in a 2009 miraculous non-fatal accident?"
+a = "Boeing 737"
+b = "Airbus A320"
+c = "Airbus A300"
+d = "Boeing 707"
+answer = input("{}\nA.{} B.{} C.{} D.{}".format(question, a, b, c, d))
+if answer == b or answer == "b":
+    print("Correct.")
+    score += 1
+elif answer == "":
+    print("An answer is required.")
+elif answer != b or answer != "b":
+    print("No it's the A320 lol.")
 
 #Ending the quiz
 print("You've reached the end of the quiz.")
@@ -94,5 +110,5 @@ elif score == 3:
     print("Not bad, decent knowledge.")
 elif score == 4:
     print("Well done!")
-elif score == 5:
+elif score >= 5:
     print("Awesome work!")
