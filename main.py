@@ -2,6 +2,7 @@ print ("Hello")
 score = 0
 play = "yes"
 tries = 2
+QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
 
 #Starting the quiz
 name = input("What is your name?")
@@ -27,7 +28,8 @@ while play == "yes":
             print("Try again!")
 
         question_attempts -= 1
-    print("lol no it's Boeing and Airbus.")
+        if question_attempts == 0:
+            print("lol no it's Boeing and Airbus.")
 
     #Repeat
     question_attempts = tries
@@ -45,7 +47,8 @@ while play == "yes":
             print("Try again!")
 
         question_attempts -= 1
-    print("lol no it's Boeing.")
+        if question_attempts == 0:
+            print("lol no it's Boeing.")
 
     #Question 3
     question_attempts = tries
@@ -63,7 +66,8 @@ while play == "yes":
             print("Try again!")
 
         question_attempts -= 1
-    print("lol no it's the A350-900.")
+        if question_attempts == 0:
+            print("lol no it's the A350-900.")
 
     #Question 4
     question_attempts = tries
@@ -81,7 +85,8 @@ while play == "yes":
             print("Try again!")
 
         question_attempts -= 1
-    print("lol no it's the B777.")
+        if question_attempts == 0:
+            print("lol no it's the B777.")
 
     #Question 5
     question_attempts = tries
@@ -99,7 +104,8 @@ while play == "yes":
             print("Try again!")
 
         question_attempts -= 1
-    print("Wrong, it's true.")
+        if question_attempts == 0:
+            print("Wrong, it's true.")
 
     #Question 6
     question_attempts = tries
@@ -109,7 +115,7 @@ while play == "yes":
         b = "Airbus A320"
         c = "Airbus A330"
         d = "Boeing 727"
-        answer = input("{}\nA.{} B.{} C.{} D.{}".format(question, a, b, c, d))
+        answer = input(QUESTION_FORMAT.format(question, a, b, c, d))
         if answer == c or answer == "c":
             print("Correct.")
             print("Next Question.")
@@ -121,7 +127,8 @@ while play == "yes":
             print("Try again!")
 
         question_attempts -= 1
-    print("No it's the A330 lol.")
+        if question_attempts == 0:
+            print("No it's the A330 lol.")
 
     #Question 7
     question_attempts = tries
@@ -131,7 +138,7 @@ while play == "yes":
         b = "Airbus A320"
         c = "Airbus A300"
         d = "Boeing 707"
-        answer = input("{}\nA.{} B.{} C.{} D.{}".format(question, a, b, c, d))
+        answer = input(QUESTION_FORMAT .format(question, a, b, c, d))
         if answer == b or answer == "b":
             print("Correct.")
             score += 1
@@ -142,7 +149,8 @@ while play == "yes":
             print("Try again!")
 
         question_attempts -= 1
-    print("No it's the A320 lol.")
+        if question_attempts == 0:
+            print("No it's the A320 lol.")
 
     #Ending the quiz
     print("You've reached the end of the quiz.")
